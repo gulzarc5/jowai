@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>TURA TEER</title>
+    <title>JOWAI TEER</title>
     {{-- <link rel="icon" href="{{ asset('logo/logo.png')}}" type="image/icon type"> --}}
 
 
@@ -57,7 +57,7 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="{{route('admin.deshboard')}}" class="site_title">
-                TURA TEER
+                JOWAI TEER
                 {{-- <img src="{{ asset('logo/logo.png')}}" height="50" style=" width: 50%;"> --}}
               </a>
             </div>
@@ -84,9 +84,9 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a href="{{ route('admin.deshboard')}}"><i class="fa fa-home"></i> Home </span></a></li>
-                  <li><a href="{{ route('admin.deshboard')}}"><i class="fa fa-home"></i> RESULT </span></a></li>
-                  <li><a href="{{ route('admin.deshboard')}}"><i class="fa fa-home"></i> COMMON NUMBER </span></a></li>
-                  <li><a href="{{ route('admin.deshboard')}}"><i class="fa fa-home"></i> CALENDER </span></a></li>
+                  <li><a href="{{ route('admin.result_list')}}"><i class="fa fa-home"></i> RESULT </span></a></li>
+                  <li><a href="{{ route('admin.common_number_List')}}"><i class="fa fa-home"></i> COMMON NUMBER </span></a></li>
+                  <li><a href="{{ route('admin.calender_number_List')}}"><i class="fa fa-home"></i> CALENDER </span></a></li>
                   <li><a href="{{route('admin.change_password_form')}}"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a></li>
 
                 </ul>
