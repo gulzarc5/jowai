@@ -11,6 +11,7 @@ class CommonNumberSeeder extends Seeder
      */
     public function run()
     {
+        \App\CommonNumber::truncate();
         \App\CommonNumber::create([
             'direct' => "01,06",
             'house' => '59',
