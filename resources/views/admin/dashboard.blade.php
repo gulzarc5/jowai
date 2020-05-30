@@ -64,7 +64,7 @@
                     <th>SL No.</th>
                     <th>Date</th>
                     <th>Day</th>
-                    <th>TURA TEER </th>
+                    <th>JOWAI TEER </th>
                 </tr>
               </thead>
               <tbody class="form-text-element">
