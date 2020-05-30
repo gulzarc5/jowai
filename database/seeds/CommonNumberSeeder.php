@@ -15,14 +15,14 @@ class CommonNumberSeeder extends Seeder
             'direct' => "01,06",
             'house' => '59',
             'ending' => '89',
-            'password' => date('Y-m-d'),
+            'added_date' => date('Y-m-d'),
         ]);
 
         \App\CommonNumber::create([
             'direct' => "55,79",
             'house' => '08',
             'ending' => '64',
-            'password' => date('Y-m-d'),
+            'added_date' => date('Y-m-d'),
         ]);
     }
 }
