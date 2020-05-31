@@ -16,28 +16,42 @@
             <p>As the archery is getting popularity in India, more and more people wants to know the Khanapara teer result today number. We are the fastest provider of Assam teer result for Guwahati.</p>
         </section>
 
-        <section class="section-main block2">
-            <h1>Khanapara Teer Result for Today</h1>
-            <p><strong>Updated on</strong>: 20-05-2020</p>
-            <table>
-                <thead>
-                    <tr>
-                        <td>F/R (4:00PM)</td>
-                        <td>S/R (4:45PM)</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>XX</strong></td>
-                        <td><strong>XX</strong></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><strong><div><button>Common Number today</button></div></strong></td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>For those who don’t know about this. It’s an bow and arrow game in which getting success is golden dreams for people living in Northeast India. In the Khanapara teer, players are always eager to improve their game to score better.</p>
-        </section>
+        @if (isset($today_result) && !empty($today_result))
+            <section class="section-main block2">
+                <h1>Khanapara Teer Result</h1>
+                <p><strong>Updated on</strong>: {{Carbon\Carbon::parse($today_result->added_date)->format('d-m-Y')}}</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>F/R (4:00PM)</td>
+                            <td>S/R (4:45PM)</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                @if (!empty($today_result->fr))
+                                    <strong>{{$today_result->fr}}</strong>
+                                @else
+                                    <strong>XX</strong>
+                                @endif                                
+                            </td>
+                            <td>
+                                @if (!empty($today_result->sr))
+                                    <strong>{{$today_result->sr}}</strong>
+                                @else
+                                    <strong>XX</strong>
+                                @endif  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><strong><div><a href="{{route('web.common.common')}}"><button style="cursor: pointer;">Common Number today</button></a></div></strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>For those who don’t know about this. It’s an bow and arrow game in which getting success is golden dreams for people living in Northeast India. In the Khanapara teer, players are always eager to improve their game to score better.</p>
+            </section>
+        @endif
 
         <section class="section-main block2">
             @include('web.include.midnav')
@@ -50,58 +64,26 @@
                 <thead>
                     <tr>
                         <td>Date</td>
-                        <td>S/R</td>
+                        <td>F/R</td>
                         <td>S/R</td>
                     </tr>
                 </thead>
                 <tbody>
+                    @if (isset($prev_result) && !empty($prev_result) && (count($prev_result) > 0))
+                        @foreach ($prev_result as $item)
+                            <tr>
+                                <td><strong>{{Carbon\Carbon::parse($item->added_date)->format('d-m-Y')}}</strong></td>
+                                <td>{{$item->fr}}</td>
+                                <td>{{$item->sr}}</td>
+                            </tr>
+                        @endforeach
+                    @else   
+                        <tr>
+                            <td colspan="3" align="center">No Previous Result Found</td>
+                        </tr>
+                    @endif
                     <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td><strong>21/05/20</strong></td>
-                        <td>45</td>
-                        <td>55</td>
-                    </tr>
-                    <tr>
-                        <td colspan="3"><strong><div><button>Get Complete List</button></div></strong></td>
+                    <td colspan="3"><strong><div><a href="{{route('web.previous.previous')}}"><button style="cursor: pointer;">Get Complete List</button></a></div></strong></td>
                     </tr>
                 </tbody>
             </table>            

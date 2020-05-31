@@ -87,6 +87,7 @@
                   <li><a href="{{ route('admin.result_list')}}"><i class="fa fa-home"></i> RESULT </span></a></li>
                   <li><a href="{{ route('admin.common_number_List')}}"><i class="fa fa-home"></i> COMMON NUMBER </span></a></li>
                   <li><a href="{{ route('admin.calender_number_List')}}"><i class="fa fa-home"></i> CALENDER </span></a></li>
+                  <li><a href="{{ route('admin.contact_list')}}"><i class="fa fa-home"></i> CONTACT MESSAGE </span></a></li>
                   <li><a href="{{route('admin.change_password_form')}}"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a></li>
 
                 </ul>

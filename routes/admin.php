@@ -21,6 +21,9 @@ Route::group(['namespace' => 'Admin'],function(){
         Route::get('calender/list','CalenderController@numberList')->name('admin.calender_number_List');
         Route::get('/calender/ajax','CalenderController@calenderListAjax')->name('admin.calender_list_ajax');
         Route::post('calender/add','CalenderController@calenderAdd')->name('admin.calender_add');
+
+        Route::get('/contact/list','DashboardController@contactList')->name('admin.contact_list');
+        Route::get('/contact/list/ajax','DashboardController@contactListAjax')->name('admin.contact_list_ajax');
         
         Route::get('/change/password/form', 'LoginController@changePasswordForm')->name('admin.change_password_form');
         Route::post('/change/password', 'LoginController@changePassword')->name('admin.change_password');

@@ -23,15 +23,37 @@
                         </figure>
                     </div>
                 </div>
-                <div class="contact-right">
-                    <label for="">Name</label>
-                    <input type="text">
-                    <label for="">Email</label>
-                    <input type="email">
-                    <label for="">Messsage</label>
-                    <textarea name="" id="" cols="30" rows="7"></textarea>
-                    <button>Send</button>
-                </div>
+                {{ Form::open(['method' => 'post','route'=>'web.contact.add']) }} 
+                    <div class="contact-right">
+                        @if (Session::has('message'))
+                            <div class="alert alert-success">{{ Session::get('message') }}</div>
+                        @endif @if (Session::has('error'))
+                            <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                        @endif
+                        <label for="">Name</label>
+                        <input type="text" name="name" placeholder="Enter Your Name" value="{{old('name')}}">
+                        @if($errors->has('name'))
+                            <span  role="alert" style="color:red">
+                                <strong>{{ $errors->first('name') }}</strong>
+                            </span>
+                        @enderror
+                        <label for="">Email</label>
+                        <input type="email" name="email" placeholder="Enter Your Email" value="{{old('email')}}">
+                        @if($errors->has('email'))
+                            <span  role="alert" style="color:red">
+                                <strong>{{ $errors->first('email') }}</strong>
+                            </span>
+                        @enderror
+                        <label for="">Messsage</label>
+                        <textarea name="message" cols="30" rows="7" placeholder="Type Message Here">{{old('message')}}</textarea>
+                        @if($errors->has('message'))
+                            <span  role="alert" style="color:red">
+                                <strong>{{ $errors->first('message') }}</strong>
+                            </span>
+                        @enderror
+                        <button style="cursor:pointer">Send</button>
+                    </div>
+                {{ Form::close() }}
             </div>
         </section>
 

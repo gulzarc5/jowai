@@ -25,56 +25,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>30-05-20</strong></td>
-                        <td>Sunday</td>
-                        <td>Yes</td>
-                    </tr>
+                    @if (isset($calender) && !empty($calender) && (count($calender) > 0 ))
+                        @foreach ($calender as $item)
+                            @php
+                                $d = new DateTime($item->play_date);
+                            @endphp 
+                            <tr>
+                                <td><strong>{{ Carbon\Carbon::parse($item->play_date)->format('d-m-Y')}}</strong></td>
+                                <td>{{$d->format('l')}}</td>
+                                <td>
+                                    @if ($item->status == '1')
+                                        YES
+                                    @else
+                                        NO
+                                    @endif
+                                </td>
+                            </tr>
+                        @endforeach
+                        <tr>
+                            <td colspan="4">{!! $calender->onEachSide(2)->links() !!}</td>
+                        </tr>
+                    @else
+                        <tr>
+                            <td colspan="3" align="center"></td>
+                        </tr>
+                    @endif
                 </tbody>
             </table>  
         </section>
