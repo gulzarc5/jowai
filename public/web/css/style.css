@@ -1,0 +1,500 @@
+/*=============================================
+=                   Generic                   =
+=============================================*/
+
+:root {
+    --base-color: #fff;
+    --sub-color: #000;
+    --trim-color: #ccc;
+    --txt-color: #a11;
+}
+
+body {
+    padding: 0 1%;
+    background-color: #ddd;
+    color: var(--txt-color);
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 1.5em;
+}
+
+h2,
+h3,
+h4 {
+    font-family: 'Playfair Display SC', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--sub-color);
+    text-decoration: none;
+    border-radius: 10%;
+}
+
+a:hover {
+    color: var(--base-color);
+}
+
+button {
+    background: #413371;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 3px;
+    outline: none;
+}
+button:hover {
+    background-color: #2d234e;
+    box-shadow: 0 0 6px #2d234e;
+}
+footer {
+    background: #171717;
+    margin: 0 -21px;
+    color: #fff;    
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/*=====  End of Generic styling  ======*/
+
+/*=============================================
+=                Navbar/header                =
+=============================================*/
+
+header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+       -moz-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin-bottom: 10px;
+    background-color: #413371;
+    position: fixed;
+    z-index: 9999;
+    padding: 0 30px;
+}
+
+.header-logo {
+    width: 100%;
+}
+
+.header-logo img {
+    width: 20%;
+}
+
+.trim {
+    -webkit-box-shadow: 0 2px 1px 1px var(--trim-color);
+            box-shadow: 0 2px 1px 1px var(--trim-color);
+}
+
+.header-title {
+    color: var(--sub-color);
+    text-align: end;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.header-skill {
+    text-align: end;
+}
+
+.btn-hamburger {
+    padding: 0;
+    font-size: 2em;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25em;
+    margin-left: auto;
+    display: none;
+}
+
+.fa-bars {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    color: var(--sub-color);
+}
+
+.header-menu {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    margin: auto;
+    opacity: 1;
+}
+
+.header-menu ul {
+    list-style-type: none;
+    margin-top: 0;
+}
+
+.header-menu li {
+    display: inline;
+}
+
+.header-menu li a {
+    color: #fff;
+    padding: 17px 30px;
+    border-radius: 0;
+}
+
+.header-menu li:hover a {
+    background-color: #e8d078;
+}
+
+.header-menu li:hover a {
+    color: #a11;
+}
+
+
+/*=====  End of Navbar/header styling  ======*/
+
+/*=============================================
+=                 Page Content                =
+=============================================*/
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-main{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.section-main table.wd-40 tr td:first-child {
+    width: 30%;
+}
+
+.section-main table {
+    width: 100%;
+    background: #ddd;
+}
+.section-main table thead td {
+    background: #333;
+    color: #fff;
+}
+
+.section-main table td {
+    background: #fff;
+    padding: 10px;
+    text-align:center;
+}
+/*=========== Block1 */
+
+.section-main.block1 h1, .section-main.block2 h1, .section-main.block4 h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #413371;
+}
+
+.section-main p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*=========== Block2 */
+
+.section-main.block2 p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.section-main.block2 table {
+    width: 100%;
+    background: #ddd;
+}
+
+.section-main.block2 table td, .section-main.block2 table thead td {
+    background: #fff;
+    padding: 20px;
+    text-align:center;
+    color: #a11;
+}
+
+img.inline{
+    width: 7%;
+    float: left;
+    padding-right: 30px;
+}
+.block5 p img {
+    width: 6%;
+}
+.img-div img {
+    width: 42%;
+    float: left;
+    padding: 20px;
+    border: 1px solid #413371;
+    margin: 15px;
+    border-radius: 3px;
+    background: #41337126;
+    box-shadow: 0 0 10px -2px #333;
+}
+.joinus h3 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.joinus figure {
+    display: inline-flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.joinus figure a:hover img {
+    opacity: .7;
+}
+.contact-left, .contact-right {
+    display: grid;
+    width: 50%;
+    float: left;
+}
+.contact-right label {
+    margin: 10px 0;
+}
+.contact-right input, .contact-right textarea {
+    padding: 10px;
+    border: 1px solid #4133717a;
+    outline: none;
+}
+.contact-left .joinus h3 {
+    text-align: left;
+}
+.contact-left .joinus figure {
+    justify-content: start;
+}
+/*=========== Block3 */
+
+.scroll-btn {
+    position: fixed;
+    bottom: 1%;
+    right: 1.5%;
+    font-size: 2em;
+    opacity: 0;
+    -webkit-transition: opacity linear 200ms;
+    -o-transition: opacity linear 200ms;
+    -moz-transition: opacity linear 200ms;
+    transition: opacity linear 200ms;
+}
+
+.show {
+    opacity:1;
+    -webkit-transition: opacity linear 500ms;
+    -o-transition: opacity linear 500ms;
+    -moz-transition: opacity linear 500ms;
+    transition: opacity linear 500ms;
+}
+
+/*=====  End of Page Content  ======*/
+
+/*=====  Start of Card  ======*/
+.row {
+    display: inline-block;
+    width: 100%;
+}
+.col-md-3 {
+    width: 23.4%;
+    float: left;
+    padding: 0 10px;
+}
+.col-md-3 .card h3 {        
+    text-transform: uppercase;
+}
+.card {
+    padding: 30px 10px;
+    border-radius: 3px;
+    text-align: center;
+}
+.col-md-3:nth-child(1) .card {
+    background: #C70039;
+    color: #fff;
+}
+.col-md-3:nth-child(2) .card {
+    background: #FFC300;
+}
+.col-md-3:nth-child(3) .card {
+    background: #004D40;
+    color: #fff;
+}
+.col-md-3:nth-child(4) .card {
+    background: #4A148C;
+    color: #fff;
+}
+.col-md-3 .card a {
+    padding: 10px 20px;
+    color: #413371;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    font-size: 14px;
+}
+.col-md-3 .card a:hover {
+    box-shadow: 1px 1px 12px 2px #fff;
+}
+/*=====  End of Card  ======*/
+
+
+/*=============================================
+=            Responsive Breakpoints           =
+=============================================*/
+/*----------  Queries for collapsing menu  ----------*/
+
+@media screen and (max-width: 768px) {
+    .header-menu ul {
+        padding: 0;
+    }
+    .btn-hamburger {
+        display: block;
+        width: 12vw;
+        background-color: #fff!important;
+        max-height: 50px;
+        margin: 8px 5px;
+    }
+    .header-menu {
+        position: fixed;
+        top: 0;
+        width: 50%;
+        opacity: 1;
+        background: #413371;  
+        min-height: 100vh;
+    }
+    .header-menu li {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+    .header-logo {
+        width: 80%;
+    }
+    .block5 p img {
+        width: 20%;
+    }    
+}
+
+@media screen and (min-width: 769px) {
+    .header-menu {
+        right: 0%!important;
+    }
+    .col-md-3 {
+        padding: 0 7px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .point-right {
+        display: none;
+    }
+    .left,
+    .right {
+        display: block;
+    }
+    .col-md-3 {
+        padding: 0 5px;
+    }
+    .img-div img {
+        width: 38.6%;
+    }
+    .header-logo img {
+        width: 20%;
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 662px) {
+    .contact {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    .point-right,
+    .left {
+        display: none;
+    }
+    .right {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .header-logo img {
+        width: 60vw;
+    }
+    .header-title {
+        font-size: 5vw;
+    }
+    .header-skill {
+        font-size: 2.5vw;
+    }
+    .btn-hamburger {
+        width: 16%;
+    }
+}
+
+@media (max-width:425px){
+    .col-md-3 {
+        width: 46.7%;
+        float: left;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .col-md-3:nth-child(odd) {
+        padding-right: 10px;
+    }
+    .col-md-3:nth-child(even) {
+        padding-left: 10px;
+    }
+    .col-md-3 .card h3 {        
+        font-size: 13px;
+    }
+    .col-md-3 .card a {
+        padding: 7px 13px;
+        font-size: 13px;
+    }    
+    .contact-left, .contact-right {
+        width: 100%;
+    }
+    .section-main {
+        padding: 10px;
+    }
+    .header-menu li a {
+        padding: 10px 0;
+    }
+    .img-div img {
+        width: 80%;
+    }
+    .section-main.block1 h1, .section-main.block2 h1, .section-main.block4 h1 {
+        font-size: 1.5em;
+    }
+    .section-main p {
+        font-size: 16px;
+    }
+}
+/*=====  End Reponsive  ======*/
