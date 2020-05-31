@@ -72,8 +72,7 @@
 
                 <div>
                   <h1>
-                    JOWAI TEER
-                    {{-- <img src="{{ asset('logo/logo.png')}}" height="150"> --}}
+                    <img src="{{ asset('web/images/logo.png')}}" height="100">
                   </h1>
                   <p>©2016 All Rights Reserved. JOWAI TEER Privacy and Terms</p>
                 </div>

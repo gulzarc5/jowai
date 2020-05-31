@@ -24,6 +24,9 @@
         <!-- Nabar menu -->
         <nav id="nav-bar" class="header-menu">
             <ul>
+                <!-- <li>
+                    <a class="nav-link" href="{{route('web.index')}}">Home</a>
+                </li> -->
                 <li>
                     <a class="nav-link" href="{{route('web.common.common')}}">Common Number</a>
                 </li>
@@ -38,9 +41,6 @@
                 </li>
                 <li>
                     <a class="nav-link" href="{{route('web.about.about')}}">About Us</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="{{route('web.contact.contact')}}">Contact Us</a>
                 </li>
             </ul>
         </nav>

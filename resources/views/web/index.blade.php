@@ -3,7 +3,7 @@
   {{-- @include('web.include.seo') --}}
 
   @section('seo')
-    <meta name="description" content="Assambigmart">
+    <meta name="description" content="Juwaibigmart">
   @endsection
 
   @section('content')
@@ -11,14 +11,14 @@
         
         <!-- Showcase of work block -->
         <section class="section-main block1">
-            <h1 class="entry-title" itemprop="headline">Khanapara Teer Result Today Number | Assam Teer Result for Guwahati Archery</h1>
-            <p>As the archery is getting popularity in India, more and more people wants to know the Khanapara teer result today number. We are the fastest provider of Assam teer result for Guwahati.</p>
-            <p>As the archery is getting popularity in India, more and more people wants to know the Khanapara teer result today number. We are the fastest provider of Assam teer result for Guwahati.</p>
+            <h1 class="entry-title" itemprop="headline">Juwai Teer Result Today Number | Juwai Teer Result for Juwai Archery</h1>
+            <p>As the archery is getting popularity in India, more and more people wants to know the Juwai teer result today number. We are the fastest provider of Juwai teer result for Juwai.</p>
+            <p>People who are curious to know results of today’s teer for their state are always keen for the final judgments (as well as previous results). We are here to deliver the latest 2020 NEWS and daily outcome for teer of Juwai teer.</p>
         </section>
 
         @if (isset($today_result) && !empty($today_result))
             <section class="section-main block2">
-                <h1>Khanapara Teer Result</h1>
+                <h1>Juwai Teer Result</h1>
                 <p><strong>Updated on</strong>: {{Carbon\Carbon::parse($today_result->added_date)->format('d-m-Y')}}</p>
                 <table>
                     <thead>
@@ -49,7 +49,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <p>For those who don’t know about this. It’s an bow and arrow game in which getting success is golden dreams for people living in Northeast India. In the Khanapara teer, players are always eager to improve their game to score better.</p>
+                <p>For those who don’t know about this. It’s an bow and arrow game in which getting success is golden dreams for people living in Northeast India. In the Juwai teer, players are always eager to improve their game to score better.</p>
             </section>
         @endif
 
@@ -59,7 +59,7 @@
 
         <section class="section-main block4">
             <h1>Teer Result for Last 7 days</h1>
-            <p><img class="inline" src="web/images/logo1.png"> Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p><img class="inline" src="web/images/logo1.png"> So you have seen the latest Juwai news, but what about the old ones? Well no worries at all. We are here to deliver all the previous result (full list) for this state. You can see the Juwai teer previous result list by month and year wise below. Alternatively you can use menu to locate them as well.</p>
             <table class="wd-40">
                 <thead>
                     <tr>
@@ -92,15 +92,12 @@
         
         <section class="section-main block1 block5">
             <div>
-                <h1 class="entry-title" itemprop="headline">Khanapara Teer Result Today Number | Assam Teer Result for Guwahati Archery</h1><br>
-                <p><img class="inline" src="web/images/archy.png"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
-                <p>As the archery is getting popularity in India, more and more people wants to know the Khanapara teer result today number. We are the fastest provider of Assam teer result for Guwahati.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                <h1 class="entry-title" itemprop="headline">Juwai Teer Result Today Number | Juwai Teer Result for Juwai Archery</h1><br>
+                <p><img class="inline" src="web/images/archy.png"> The Teer of Juwai is a quite big area in which several states play this sport. The people are always looking for archery outcomes on daily basis in the morning and evening. The teer news and Juwai teer result is provided here on daily basis. People are quite excited to know the final judgment figures for Juwai.</p>
             </div>
             <div class="img-div"><img src="web/images/archy2.png"><img src="web/images/archy3.png"></div>            
             <div>
-                <h1 class="entry-title" itemprop="headline">"Neque porro quisquam est qui dolorem ipsum quia dolor."</h1><br>
-                <p><img class="inline" src="web/images/target.png" style="float: right;width: 15%;;"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
-                <p>As the archery is getting popularity in India, more and more people wants to know the Khanapara teer result today number. We are the fastest provider of Assam teer result for Guwahati.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.</p>
+                <p><img class="inline" src="web/images/target.png" style="float: right;width: 15%;;"> So we have categorized the final numerals in different tables. These tables are daily processed and gets a new Juwai result field on the top. Moreover, we have several guides on the Indian archery. We hope this will surely help you. So get today archery number for teer Juwai along with its counter and target information here</p>
             </div>            
             <div class="joinus">
                 <h3>Join us on Facebook/WhatsApp</h3><br>

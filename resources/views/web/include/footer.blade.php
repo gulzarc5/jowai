@@ -1,5 +1,5 @@
 <footer>
-            <p>As the archery is getting popularity in India, more and more people wants to know the Khanapara teer result today number. We are the fastest provider of Assam teer result for Guwahati.It has survived not only five centuries, but also the leap into electronic.</p>
+            <p>As the archery is getting popularity in India, more and more people wants to know the Juwai teer result today number. We are the fastest provider of Juwai teer result. It has survived not only five centuries, but also the leap into electronic.</p>
             <a href="{{route('web.index')}}" style="color:#fff">HOME</a>
             <h2>Copyright © 2020 – Juwai Teer – All Rights Reserved.</h2>
         </footer>

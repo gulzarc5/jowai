@@ -30,6 +30,6 @@ Route::get('/Dream-Number', function () {
     return view('web.dream.dream');
 })->name('web.dream.dream');
 // ========== Contact =========
-Route::get('/Contact', function () {
-    return view('web.contact.contact');
-})->name('web.contact.contact');
+// Route::get('/Contact', function () {
+//     return view('web.contact.contact');
+// })->name('web.contact.contact');

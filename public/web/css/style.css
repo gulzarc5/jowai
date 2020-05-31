@@ -61,6 +61,29 @@ footer {
     padding: 10px 20px;
     text-align: center;
 }
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+.pagination li {
+    list-style: none;
+    padding: 1px 6px;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.pagination li:hover {
+    background-color: #2d234e;
+}
+.pagination li:hover span, .pagination li:hover a {
+    color: #fff!important;
+}
+.pagination li.disabled {
+    opacity: 0.4;
+    background: #c7c7c7;
+}
 
 /*=====  End of Generic styling  ======*/
 
@@ -240,10 +263,10 @@ img.inline{
     padding-right: 30px;
 }
 .block5 p img {
-    width: 6%;
+    width: 4%;
 }
 .img-div img {
-    width: 42%;
+    width: 44%;
     float: left;
     padding: 20px;
     border: 1px solid #413371;

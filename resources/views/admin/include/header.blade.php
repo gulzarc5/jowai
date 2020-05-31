@@ -57,8 +57,7 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="{{route('admin.deshboard')}}" class="site_title">
-                JOWAI TEER
-                {{-- <img src="{{ asset('logo/logo.png')}}" height="50" style=" width: 50%;"> --}}
+                <img src="{{ asset('web/images/logo.png')}}" height="50">
               </a>
             </div>
 
