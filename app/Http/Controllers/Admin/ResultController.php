@@ -33,21 +33,23 @@ class ResultController extends Controller
         $this->validate($request, [
             'number'   => 'required',
             'type' => 'required',
+            'added_time'=>'required',
         ]);
-        
         $date = Carbon::now()->setTimezone('Asia/Kolkata')->toDateString();
         $type = $request->input('type');
         $number = $request->input('number');
-
+        $added_time = $request->input('added_time');
         $today_result = Result::whereDate('added_date',$date)->count();
         if ($today_result > 0) {
             if ($type == '1') {
                 Result::whereDate('added_date',$date)->update([
                     'fr'=>$number,
+                    'add_time'=> $added_time,
                 ]);
             } else {
                 Result::whereDate('added_date',$date)->update([
                     'sr'=>$number,
+                    'add_time'=> $added_time,
                 ]);
             }
             
@@ -56,11 +58,13 @@ class ResultController extends Controller
                 Result::create([
                     'fr'=>$number,
                     'added_date' => $date,
+                    'add_time'=> $added_time,
                 ]);
             } else {
                 Result::create([
                     'sr'=>$number,
                     'added_date' => $date,
+                    'add_time'=> $added_time,
                 ]);
             }
         }

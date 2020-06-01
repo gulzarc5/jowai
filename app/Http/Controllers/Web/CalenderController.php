@@ -10,7 +10,7 @@ class CalenderController extends Controller
 {
     public function index()
     {
-        $calender = Calender::orderBy('play_date','desc')->paginate(2);
+        $calender = Calender::orderBy('play_date','desc')->paginate(20);
         return view('web.calender.calender',compact('calender'));
     }
 }

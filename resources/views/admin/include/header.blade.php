@@ -30,6 +30,10 @@
     <link href="{{asset('admin/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet">
     <!-- JQVMap -->
     <link href="{{asset('admin/vendors/jqvmap/dist/jqvmap.min.css')}}" rel="stylesheet"/>
+
+    <!-- bootstrap-datetimepicker -->
+    <link href="{{asset('admin/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css')}}" rel="stylesheet">
+
     <!-- bootstrap-daterangepicker -->
     <link href="{{asset('admin/vendors/bootstrap-daterangepicker/daterangepicker.css')}}" rel="stylesheet">
 
@@ -86,7 +90,7 @@
                   <li><a href="{{ route('admin.result_list')}}"><i class="fa fa-home"></i> RESULT </span></a></li>
                   <li><a href="{{ route('admin.common_number_List')}}"><i class="fa fa-home"></i> COMMON NUMBER </span></a></li>
                   <li><a href="{{ route('admin.calender_number_List')}}"><i class="fa fa-home"></i> CALENDER </span></a></li>
-                  <li><a href="{{ route('admin.contact_list')}}"><i class="fa fa-home"></i> CONTACT MESSAGE </span></a></li>
+                  {{-- <li><a href="{{ route('admin.contact_list')}}"><i class="fa fa-home"></i> CONTACT MESSAGE </span></a></li> --}}
                   <li><a href="{{route('admin.change_password_form')}}"><i class="fa fa-key" aria-hidden="true"></i>Change Password</a></li>
 
                 </ul>

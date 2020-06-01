@@ -23,8 +23,8 @@
                 <table>
                     <thead>
                         <tr>
-                            <td>F/R (4:00PM)</td>
-                            <td>S/R (4:45PM)</td>
+                            <td>F/R ({{$today_result->add_time}})</td>
+                            <td>S/R ({{$today_result->add_time}})</td>
                         </tr>
                     </thead>
                     <tbody>

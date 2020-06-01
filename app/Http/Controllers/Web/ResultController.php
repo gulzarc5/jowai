@@ -10,7 +10,7 @@ class ResultController extends Controller
 {
     public function index()
     {
-        $result = Result::orderBy('id','desc')->paginate(2);
+        $result = Result::orderBy('id','desc')->paginate(20);
         return view('web.previous.previous',compact('result'));
     }
 }

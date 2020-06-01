@@ -18,6 +18,7 @@ class CreateResultTable extends Migration
             $table->string('fr')->nullable();
             $table->string('sr')->nullable();
             $table->date('added_date');
+            $table->string('add_time')->nullable();
             $table->timestamps();
         });
     }

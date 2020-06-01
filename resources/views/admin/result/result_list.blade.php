@@ -30,20 +30,20 @@
                         {{ Form::open(['method' => 'post','route'=>'admin.result_insert','enctype'=>'multipart/form-data']) }}              
                         
                         <center><h2>Add New Result</h2></center>
-                        <div class="well" style="overflow: auto">
-                            <div class="form-row mb-10">
+                        {{-- <div class="well" style="overflow: auto"> --}}
+                            {{-- <div class="form-row mb-10"> --}}
 
-                                <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
+                                <div class="col-md-4 col-sm-12 col-xs-12 mb-3">
                                     <label for="number">Number</label>
-                                    <input type="number" class="form-control" name="number"  placeholder="Enter Number"  value="{{ old('number') }}" required>
+                                    <input type="text" class="form-control" name="number"  placeholder="Enter Number"  value="{{ old('number') }}" required>
                                     @if($errors->has('number'))
-                                        <span class="invalid-feedback" role="alert" style="color:red">
+                                        <span  role="alert" style="color:red">
                                             <strong>{{ $errors->first('number') }}</strong>
                                         </span>
                                     @enderror
                                 </div>
 
-                                <div class="col-md-6 col-sm-12 col-xs-12 mb-3">
+                                <div class="col-md-4 col-sm-12 col-xs-12 mb-3">
                                     <label for="type">Select Type</label>
                                     <select  class="form-control" name="type" required>
                                         <option value="">Please Select Type</option>
@@ -51,8 +51,26 @@
                                         <option value="2">SR</option>
                                     </select>
                                     @if($errors->has('type'))
-                                        <span class="invalid-feedback" role="alert" style="color:red">
+                                        <span  role="alert" style="color:red">
                                             <strong>{{ $errors->first('type') }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-4 col-sm-12 col-xs-12 mb-3">
+                                    Only Time Picker <small>For 24H format use format: 'HH:mm'</small>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='myDatepicker3'>
+                                            <input type='text' class="form-control" name="added_time" />
+                                            <span class="input-group-addon">
+                                               <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    
+                                    @if($errors->has('added_time'))
+                                        <span  role="alert" style="color:red">
+                                            <strong>{{ $errors->first('added_time') }}</strong>
                                         </span>
                                     @enderror
                                 </div>
@@ -61,8 +79,8 @@
                                     {{ Form::submit('Submit', array('class'=>'btn btn-success')) }}
                                 </div>
 
-                            </div>
-                        </div>                       
+                            {{-- </div> --}}
+                        {{-- </div>                        --}}
 
                      
                         {{ Form::close() }}
@@ -106,6 +124,9 @@
  @section('script')
      
      <script type="text/javascript">
+        $('#myDatepicker3').datetimepicker({
+            format: 'hh:mm A'
+        });
          $(function () {
     
             var table = $('#result_table').DataTable({
