@@ -104,7 +104,9 @@
                                 <th>Sl</th>
                                 <th>Date</th>
                                 <th>FR</th>
+                                <th>Time FR</th>
                                 <th>SR</th>
+                                <th>Time SR</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -137,8 +139,10 @@
                 columns: [
                     {data: 'DT_RowIndex', name: 'DT_RowIndex'},      
                     {data: 'added_date', name: 'added_date',searchable: true},    
-                    {data: 'fr', name: 'fr',searchable: true},          
-                    {data: 'sr', name: 'sr',searchable: true},
+                    {data: 'fr', name: 'fr',searchable: true},    
+                    {data: 'add_time_fr', name: 'add_time_fr',searchable: true},        
+                    {data: 'sr', name: 'sr',searchable: true}, 
+                    {data: 'add_time_sr', name: 'add_time_sr',searchable: true}, 
                     {data: 'action', name: 'action', orderable: false, searchable: false},
                 ]
             });            

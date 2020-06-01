@@ -9,7 +9,7 @@ class Result extends Model
     protected $table = 'result';
 
     protected $fillable = [
-        'fr', 'sr', 'added_date','add_time',
+        'fr', 'sr', 'added_date','add_time_fr','add_time_sr',
     ];
 
 }

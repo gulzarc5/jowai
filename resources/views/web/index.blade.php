@@ -23,8 +23,8 @@
                 <table>
                     <thead>
                         <tr>
-                            <td>F/R ({{$today_result->add_time}})</td>
-                            <td>S/R ({{$today_result->add_time}})</td>
+                            <td>F/R ({{$today_result->add_time_fr}})</td>
+                            <td>S/R ({{$today_result->add_time_sr}})</td>
                         </tr>
                     </thead>
                     <tbody>

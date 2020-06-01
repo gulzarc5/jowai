@@ -44,12 +44,12 @@ class ResultController extends Controller
             if ($type == '1') {
                 Result::whereDate('added_date',$date)->update([
                     'fr'=>$number,
-                    'add_time'=> $added_time,
+                    'add_time_fr'=> $added_time,
                 ]);
             } else {
                 Result::whereDate('added_date',$date)->update([
                     'sr'=>$number,
-                    'add_time'=> $added_time,
+                    'add_time_sr'=> $added_time,
                 ]);
             }
             
@@ -58,13 +58,13 @@ class ResultController extends Controller
                 Result::create([
                     'fr'=>$number,
                     'added_date' => $date,
-                    'add_time'=> $added_time,
+                    'add_time_fr'=> $added_time,
                 ]);
             } else {
                 Result::create([
                     'sr'=>$number,
                     'added_date' => $date,
-                    'add_time'=> $added_time,
+                    'add_time_sr'=> $added_time,
                 ]);
             }
         }
@@ -83,6 +83,8 @@ class ResultController extends Controller
         Result::where('id',$id)->update([
             'fr'=>$request->input('fr'),
             'sr'=>$request->input('sr'),
+            'add_time_fr'=> $request->input('added_time_fr'),
+            'add_time_sr'=> $request->input('added_time_sr'),
         ]);
         return redirect()->back()->with('message','Result Updated Successfully');
     }
